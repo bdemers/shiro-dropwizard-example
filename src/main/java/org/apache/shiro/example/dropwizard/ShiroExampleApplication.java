@@ -54,7 +54,7 @@ public class ShiroExampleApplication extends Application<ShiroExampleConfigurati
     private void configureShiro(final Environment environment) {
 
         // One line to enable Shiro
-        environment.jersey().register(ShiroFeature.class);
+        environment.jersey().register(ShiroFeature.class); // JAX-RS Feature
 
         // Dropwizard does not load servlet fragments, so we must configure the servlet filter
         environment.servlets().addServletListeners(new EnvironmentLoaderListener());
